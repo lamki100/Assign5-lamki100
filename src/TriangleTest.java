@@ -51,6 +51,12 @@ public class TriangleTest {
     	sideC = 5.0;
         perimeter = 12.0;
         area = 6.0;
+        
+        try {
+			t = new Triangle(sideA, sideB, sideC);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
     }
 
     /**
@@ -58,13 +64,7 @@ public class TriangleTest {
      */
     @Test
     public void testTriangleConstructor() {
-    	try {
-			t = new Triangle(sideA, sideB, sideC);
-			assertTrue((t.sideA == 3.0 && t.sideB == 4.0 && t.sideC == 5.0));
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+    	assertTrue((t.sideA == 3.0 && t.sideB == 4.0 && t.sideC == 5.0));
    }
 
     /**

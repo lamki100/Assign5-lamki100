@@ -45,6 +45,12 @@ public class RightAngledTriangleTest {
     	height = 4.0;
     	hypotenuse = 5.0;
         area = 6.0;
+
+    	try {
+			t = new RightAngledTriangle(width, height, hypotenuse);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
     }
 
     /**
@@ -52,14 +58,8 @@ public class RightAngledTriangleTest {
      */
     @Test
     public void testTriangleConstructor() {
-    	try {
-			t = new RightAngledTriangle(width, height, hypotenuse);
-			assertTrue((t.sideA == 3.0 && t.sideB == 4.0 && t.sideC == 5.0));
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-   }
+    	assertTrue((t.sideA == 3.0 && t.sideB == 4.0 && t.sideC == 5.0));
+    }
 
     /**
      * Test method for {@link RightAngledTriangle#validateInput(double, double, double)}.

@@ -33,6 +33,11 @@ public class EquilateralTriangleTest {
     public void setUp() {
     	length = 3.0;
         area = 3.9;
+        try {
+			t = new EquilateralTriangle(length);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
     }
 
     /**
@@ -40,14 +45,8 @@ public class EquilateralTriangleTest {
      */
     @Test
     public void testTriangleConstructor() {
-    	try {
-			t = new EquilateralTriangle(length);
-			assertTrue((t.sideA == 3.0 && t.sideB == 3.0 && t.sideC == 3.0));
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-   }
+    	assertTrue((t.sideA == 3.0 && t.sideB == 3.0 && t.sideC == 3.0));
+    }
 
     /**
      * Test method for {@link EquilateralTriangle#validateInput(double, double, double)}.
