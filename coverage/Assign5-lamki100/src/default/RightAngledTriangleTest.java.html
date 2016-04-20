@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../.resources/report.gif" type="image/gif"/><title>RightAngledTriangleTest.java</title><link rel="stylesheet" href="../../../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../.sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">(default package) (Apr 20, 2016 1:31:59 PM)</a> &gt; <a href="../../index.html" class="el_group">Assign5-lamki100</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">RightAngledTriangleTest.java</span></div><h1>RightAngledTriangleTest.java</h1><pre class="source lang-java linenums">import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+/**
+ * Unit tests for the Triangle class.
+ * 
+ * @author Katie Lamkin
+ * @version 4/18/2016
+ */
+<span class="fc" id="L12">public class RightAngledTriangleTest {</span>
+
+	/**
+     * RightAngledTriangle t will be the triangle used for the tests
+     */
+    public RightAngledTriangle t;
+    
+    /**
+     * Double width will be the length of side A
+     */
+    public double width;
+    
+    /**
+     * Double height will be the length of side B
+     */
+    public double height;
+    
+    /**
+     * Double hypotenuse will be the length of side C
+     */
+    public double hypotenuse;
+
+    /**
+     * Double area will be the area of the triangle
+     */
+    public double area;
+	
+    /**
+     * Setup the initial values for the Tests
+     */
+    @Before // This method will run before each test method
+    public void setUp() {
+<span class="fc" id="L44">    	width = 3.0;</span>
+<span class="fc" id="L45">    	height = 4.0;</span>
+<span class="fc" id="L46">    	hypotenuse = 5.0;</span>
+<span class="fc" id="L47">        area = 6.0;</span>
+
+    	try {
+<span class="fc" id="L50">			t = new RightAngledTriangle(width, height, hypotenuse);</span>
+<span class="pc" id="L51">		} catch (Exception e) {</span>
+<span class="nc" id="L52">			e.printStackTrace();</span>
+		}
+<span class="fc" id="L54">    }</span>
+
+    /**
+     * Test method for {@link RightAngledTriangle#RightAngledTriangle(double, double, double)}.
+     */
+    @Test
+    public void testTriangleConstructor() {
+<span class="pc bpc" id="L61" title="3 of 6 branches missed.">    	assertTrue((t.sideA == 3.0 &amp;&amp; t.sideB == 4.0 &amp;&amp; t.sideC == 5.0));</span>
+<span class="fc" id="L62">    }</span>
+
+    /**
+     * Test method for {@link RightAngledTriangle#validateInput(double, double, double)}.
+     */
+    @Test
+    public void testValidateInput() {
+<span class="fc" id="L69">    	assertTrue(t.validateInput(width, height, hypotenuse));</span>
+<span class="fc" id="L70">    }</span>
+    
+    /**
+     * Test method for {@link RightAngledTriangle#getArea()}.
+     */
+    @Test
+    public void testGetArea() {
+<span class="pc bpc" id="L77" title="1 of 2 branches missed.">        assertTrue((double) (Math.round(t.getArea() * 10.0)/10.0) == area);</span>
+<span class="fc" id="L78">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span>(default package) (Apr 20, 2016 1:31:59 PM)</div></body></html>

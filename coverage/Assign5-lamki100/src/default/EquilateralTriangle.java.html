@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../../../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../../../.resources/report.gif" type="image/gif"/><title>EquilateralTriangle.java</title><link rel="stylesheet" href="../../../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../../../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../../../.sessions.html" class="el_session">Sessions</a></span><a href="../../../index.html" class="el_report">(default package) (Apr 20, 2016 1:31:59 PM)</a> &gt; <a href="../../index.html" class="el_group">Assign5-lamki100</a> &gt; <a href="../index.html" class="el_bundle">src</a> &gt; <a href="index.source.html" class="el_package">default</a> &gt; <span class="el_source">EquilateralTriangle.java</span></div><h1>EquilateralTriangle.java</h1><pre class="source lang-java linenums">/**
+ * SE320- Individual Assignment 5
+ * 
+ * Represents a Equilateral Triangle
+ * @author Dr. Donyina
+ * @author Katie Lamkin
+ * @version 4/18/16
+ */
+public class EquilateralTriangle extends Triangle {
+    
+	/**
+     * Constructs an equilateral triangle using the provided side lengths.
+     * Uses the class Triangle's constructor and passes in length for all sides.
+     *
+     * @param length The length to assign to this triangle for all sides.
+     */
+    EquilateralTriangle(double length)
+            throws Exception {
+<span class="fc" id="L19">        super(length, length, length);</span>
+<span class="fc" id="L20">    }</span>
+
+    /**
+     * Validating the input to tell whether the input can make a real equaliteral triangle seeing if all sides are equal:
+     * 
+     * @param sideA The sideA length is used to test whether the lengths make a valid triangle.
+     * @param sideB The sideB length is used to test whether the lengths make a valid triangle.
+     * @param sideC The sideC length is used to test whether the lengths make a valid triangle.
+     * @return true if sides make a valid equaliteral triangle or false if the sides do not make a valid equaliteral triangle.
+     */
+    public boolean validateInput(double sideA, double sideB, double sideC) {
+<span class="pc bpc" id="L31" title="3 of 6 branches missed.">    	if( sideA &gt; 0 &amp;&amp; sideB &gt; 0 &amp;&amp; sideC &gt; 0){</span>
+<span class="pc bpc" id="L32" title="3 of 6 branches missed.">     	   if (sideA == sideB &amp;&amp; sideA == sideC &amp;&amp; sideB == sideC){</span>
+<span class="fc" id="L33">     		   return true;</span>
+     	   }
+<span class="nc" id="L35">     	   else return false;</span>
+        }
+<span class="nc" id="L37">        else return false;</span>
+    }
+
+    /**
+     * What is the area of this triangle?
+     *
+     * @return the square root of 3 divided by 4, all multuplied by sideA squared
+     */
+    public double getArea() {
+<span class="fc" id="L46">        return (Math.sqrt(3)/4) * sideA * sideA;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.6.201602180812</span>(default package) (Apr 20, 2016 1:31:59 PM)</div></body></html>
